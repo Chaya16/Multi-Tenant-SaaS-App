@@ -1,11 +1,14 @@
-
 <div class="log-form" style="text-align: center;">
   <h2>Welcome to UML Parser Grader. Please provide your login information</h2>
-  <form action="/login" method="post" >
-    <input type="text" title="username" placeholder="username" />
-    <input type="password" title="password" placeholder="password" />
-    <input type="submit" class="btn" value="Login">
+  <form action="/login" method="post">
+    <input type="text" name="uname" title="username" placeholder="username" value="{{
+          request.form.username }}"/>
+    <input type="password" name="pwd"" title="password" placeholder="password" value="{{
+          request.form.password }}"/>
+    <input type="submit" class="btn" value="Login" />
      
   </form>
- 
+ {% if error %}
+        <p class="error"><strong>Error:</strong> {{ error }}
+ {% endif %}
 </div><!--end log form -->

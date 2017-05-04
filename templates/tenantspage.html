@@ -185,10 +185,14 @@
             </div>
             <div id="right" style="float:right; width:20%;"> This is right panel </div>  
             <h3>Provide Source Code Path</h3>
-            <form action="Submit" method="post">
+            <!--form action="Submit" method="post">
                             Project file path: <input type="text" name="projectFilepath"><br>
                             <input type="submit" value="Submit">
 
+            </form-->
+            <form action="app.py"  method="post">
+                <input type="file" name="file" accept=".zip">
+                <input type="submit" value="Upload">
             </form>
              
         </div>
