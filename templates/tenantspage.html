@@ -118,9 +118,11 @@
 }
 </style>
 <div class="container">
-    <div id="left" style="float:left; width:80%;"> This is left panel                     
-    
+<form action="/tenantroute" method="post">
+    <div id="left" style="float:left; width:50%;"> This is left panel                     
+            
             <div class="col-sm-12">
+            <input type="radio" name="tenant" value="instance1">
                 <div class="bs-calltoaction bs-calltoaction-info">
                     <div class=.col">
                         <div class="col-md-9 cta-contents">
@@ -130,12 +132,10 @@
                                 <p>karan.didwani@sjsu.edu</p>
                             </div>
                         </div>
-                        <div class="col-md-3 cta-button">
-                            <a href="#" class="btn btn-lg btn-block btn-info">Select</a>
-                        </div>
-                     </div>
+                    </div>
                 </div>
 
+                <input type="radio" name="tenant" value="instance3">
                 <div class="bs-calltoaction bs-calltoaction-success">
                     <div class=.col">
                         <div class="col-md-9 cta-contents">
@@ -145,13 +145,12 @@
                                 <p>noopur.joshi@sjsu.edu</p>
                             </div>
                         </div>
-                        <div class="col-md-3 cta-button">
-                            <a href="#" class="btn btn-lg btn-block btn-success">Select</a>
-                        </div>
-                     </div>
+                    </div>
                 </div>
 
+                <input type="radio" name="tenant" value="instance3">
                 <div class="bs-calltoaction bs-calltoaction-warning">
+                
                     <div class=.col">
                         <div class="col-md-9 cta-contents">
                             <h1 class="cta-title">Tenant 3</h1>
@@ -160,12 +159,10 @@
                                 <p>foram.mehta@sjsu.edu</p>
                             </div>
                         </div>
-                        <div class="col-md-3 cta-button">
-                            <a href="#" class="btn btn-lg btn-block btn-warning">Select</a>
-                        </div>
                      </div>
                 </div>
-
+                
+                <input type="radio" name="tenant" value="instance4">
                 <div class="bs-calltoaction bs-calltoaction-danger">
                     <div class=.col">
                         <div class="col-md-9 cta-contents">
@@ -175,24 +172,25 @@
                                 <p>arunkumar.chandramohan@sjsu.edu</p>
                             </div>
                         </div>
-                        <div class="col-md-3 cta-button">
-                            <a href="#" class="btn btn-lg btn-block btn-danger">Select</a>
-                        </div>
+                        
                      </div>
                 </div>
 
             </div>
             </div>
-            <div id="right" style="float:right; width:20%;"> This is right panel </div>  
+            <div id="right" style="float:right; width:50%;"> This is right panel </div>  
             <h3>Provide Source Code Path</h3>
             <!--form action="Submit" method="post">
                             Project file path: <input type="text" name="projectFilepath"><br>
                             <input type="submit" value="Submit">
 
             </form-->
-            <form action="app.py"  method="post">
+           
                 <input type="file" name="file" accept=".zip">
                 <input type="submit" value="Upload">
+
+                <h3>Displaying Image</h3>
+                <!--img src="../static/output.png"-->
             </form>
              
         </div>

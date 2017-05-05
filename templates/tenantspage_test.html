@@ -1,0 +1,145 @@
+<style type="text/css">
+.myfile{
+    width:calc(45% + 20px);
+    padding: 15px 25px;
+    
+    margin-top: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+.bs-calltoaction{
+    position: relative;
+    width:calc(25% + 20px);
+    padding: 15px 25px;
+    border: 1px solid black;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+    .bs-calltoaction > .col{
+        display:table;
+        width: calc(100% + 30px);
+    }
+     
+        .bs-calltoaction > .col > [class^="col-"],
+        .bs-calltoaction > .col > [class*=" col-"]{
+            float:none;
+            display:table-cell;
+            vertical-align:middle;
+        }
+
+            .cta-contents{
+                padding-top: 3px;
+                padding-bottom: 3px;
+            }
+
+                .cta-title{
+                    margin: 0 auto 10px;
+                    padding: 0;
+                }
+
+                .cta-desc{
+                    padding: 0;
+                }
+
+                .cta-desc p:last-child{
+                    margin-bottom: 0;
+                }
+
+            .cta-button{
+                padding-top: 5px;
+                padding-bottom: 5px;
+            }
+
+@media (max-width: 991px){
+    .bs-calltoaction > .col{
+        display:block;
+        width: calc(10% + 10px);
+    }
+
+        .bs-calltoaction > .col > [class^="col-"],
+        .bs-calltoaction > .col > [class*=" col-"]{
+            float:none;
+            display:block;
+            vertical-align:middle;
+            position:calc(10% + 10px);
+        }
+         .cta-contents{
+            text-align: center;
+        }
+}
+
+
+.tenant1{
+    color: #fff;
+    background-color: #5bc0de;
+    border-color: #46b8da;
+}
+
+.tenant2{
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+}
+
+.tenant3{
+    color: #fff;
+    background-color: #f0ad4e;
+    border-color: #eea236;
+}
+
+.tenant4{
+    color: #fff;
+    background-color: #d9534f;
+    border-color: #d43f3a;
+}
+
+.tenant1 .cta-button .btn,
+.tenant2 .cta-button .btn,
+.tenant3 .cta-button .btn,
+.tenant4 .cta-button .btn,{
+    border-color:#fff;
+}
+
+</style>
+
+<div class="container">
+    <div id="left" style="float:left; width:50%;"> This is left panel                     
+            
+    <form action="/tenantspage" method="post">
+    <input type="radio" name="tenant" value="instance1">
+        <div class="tenant1">
+        <div class=.col">
+        <div class="col-md-9 cta-contents">
+        <div class="cta-desc">
+            <p>Tenant1</p>
+            <p>Karan Didwani</p>
+            <p>karan.didwani@sjsu.edu</p>
+        </div>
+        </div>
+        </div>
+        </div>
+    </div>
+    
+    <input type="radio" name="tenant" value="instance2"> Tenant 2 : Noopur Joshi </br>
+    <input type="radio" name="tenant" value="instance3"> Tenant 3 : Foram Mehta </br>
+    <input type="radio" name="tenant" value="instance4"> Tenant 4 : Arun Kumar Chandramohan </br>
+    </form>
+ 
+</div><!--end log form -->
+
+            <div id="right" style="float:right; width:50%;"> This is right panel </div>  
+            <h3>Provide Source Code Path</h3>
+            <!--form action="Submit" method="post">
+                            Project file path: <input type="text" name="projectFilepath"><br>
+                            <input type="submit" value="Submit">
+
+            </form-->
+            <form action="app.py"  method="post">
+                <input type="file" name="file" accept=".zip">
+                <input type="submit" value="Upload">
+            </form>
+             
+        </div>
+
