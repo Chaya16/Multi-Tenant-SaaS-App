@@ -12,7 +12,7 @@ from flask import send_file
 
 application = Flask(__name__)
 application.config['UPLOAD_FOLDER'] = 'uploads/'
-#application.config['UNZIP_FOLDER'] = 'parser/'
+
 
 CORS(application)
 
@@ -24,13 +24,7 @@ def upload():
     filename = secure_filename(file.filename)
     print(filename)
     file.save(os.path.join(application.config['UPLOAD_FOLDER'], filename))
-
-    #code to unzip file
-    #print("Unzipping folder")
-    #zip_ref = zipfile.ZipFile(application.config['UPLOAD_FOLDER']+filename, 'r')
-    #zip_ref.extractall(application.config['UNZIP_FOLDER']+os.path.splitext(filename)[0])
-    #zip_ref.close()
-
+    
     generateUML(application.config['UPLOAD_FOLDER'] + filename)
     return getImage()
 
@@ -45,18 +39,18 @@ def generateUML(inputfilepath):
     result = popen.stdout.read()
     print(result)
     
-'''
+
 def clean_dir():
     print("Cleaning Uploaded Directory")
     import os, shutil
-    for the_file in os.listdir(application.config['UNZIP_FOLDER']):
-        file_path = os.path.join(application.config['UNZIP_FOLDER'], the_file)
+    for the_file in os.listdir(application.config['uploads/out/']):
+        file_path = os.path.join(application.config['uploads/out/'], the_file)
         try:
             if os.path.isfile(file_path):
                 os.unlink(file_path)
         except Exception as e:
             print(e)
-'''            
+            
 
 def getImage():
     print("return image")
