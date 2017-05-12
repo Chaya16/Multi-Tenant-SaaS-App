@@ -1,0 +1,67 @@
+<div>
+    <form name="form2" class="form-style-9 check-element animate-show-hide" id="upright" >
+        <ul class="form-style-1">
+            <li>
+                <input type = "file" file-model = "myFile" accept="application/x-zip-compressed"/>
+            </li>
+            <li>
+                <button ng-click = "uploadFile()">Upload</button>
+            </li>
+           
+            <li>
+                <br /> <img src="data:image/JPEG;base64,{{umlimg}}" ng-model="umlimg" width="550" height="550">
+            </li>
+        </ul>
+    </form>
+
+    <form name="form1" class="form-style-9 check-element animate-show-hide" ng-show="graderChecked" id="upleft">
+        <ul class="form-style-1">
+
+            <li>
+                <label ng-model="msg"> <span class="required"></span>{{msg}}</label>
+            </li>
+            <li>
+                <label>TenantID : T2</label>
+                
+            </li>
+            <li>
+                <label>Tenant Name : Noopur Joshi</label>
+                
+            </li>
+            <li>
+                <label>Complete:<span class="required">*</span></label>
+                <select ng-model="complete" class="field-select" id="grade" required=true>
+                        <option>Y</option>
+                        <option>N</option>
+                </select>
+
+            </li>
+            <li >
+                <label>
+                    Letter Grade (A-F):
+                    <select ng-model="grade" class="field-select" id="grade" required=true>
+                        <option>A</option>
+                        <option>B</option>
+                        <option>C</option>
+                        <option>D</option>
+                        <option>E</option>
+                        <option>F</option>
+                    </select>
+                </label>
+            </li>
+
+            <li>
+                <label>Comments<span class="required">*</span></label>
+                <textarea required="true" class="field-long" ng-model="gradecomments"></textarea>
+
+            </li>
+            <li>
+                <button style="width: 30%" ng-click = "submitGrades()">Submit </button>
+            </li>
+
+            <li>
+                <label ng-model="msg"></label>
+            </li>
+        </ul>
+    </form>
+</div>
