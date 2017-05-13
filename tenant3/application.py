@@ -17,7 +17,7 @@ application.config['UPLOAD_FOLDER'] = 'uploads/'
 CORS(application)
 
 
-@application.route("/genUML", methods=['POST'])
+@application.route("/tenant3", methods=['POST'])
 def upload():
     #Code to upload file
     file = request.files['file']
