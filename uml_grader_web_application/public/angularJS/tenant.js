@@ -75,7 +75,8 @@ tenant.controller("tenant1_controller",['$scope','$http', 'fileUpload', '$route'
         console.log('file is ' );
         console.dir(file);
 
-        var uploadUrl = "http://ec2-user@ec2-52-40-177-136.us-west-2.compute.amazonaws.com:5000/genUML";
+        //var uploadUrl = "http://ec2-user@ec2-52-40-177-136.us-west-2.compute.amazonaws.com:5000/genUML";
+        var uploadUrl = "http://TenantLoadBalancer-646608857.us-west-2.elb.amazonaws.com/tenant1";
         fileUpload.uploadFileToUrl(file, uploadUrl, function(data){
             console.log("callback from upload");
             console.log(data);
@@ -128,7 +129,7 @@ tenant.controller("tenant2_controller",['$scope','$http', 'fileUpload', function
         console.log('file is ' );
         console.dir(file);
 
-        var uploadUrl = "http://ec2-34-210-109-137.us-west-2.compute.amazonaws.com:5000/genUML";
+        var uploadUrl = "http://TenantLoadBalancer-646608857.us-west-2.elb.amazonaws.com/tenant2";
         fileUpload.uploadFileToUrl(file, uploadUrl, function(data){
             console.log("callback from upload");
             console.log(data);
@@ -182,7 +183,7 @@ tenant.controller("tenant3_controller",['$scope','$http', 'fileUpload', function
         console.log('file is ' );
         console.dir(file);
 
-        var uploadUrl = "http://ec2-user@ec2-54-69-78-148.us-west-2.compute.amazonaws.com:5000/genUML";
+        var uploadUrl = "http://TenantLoadBalancer-646608857.us-west-2.elb.amazonaws.com/tenant3";
         fileUpload.uploadFileToUrl(file, uploadUrl, function(data){
             console.log("callback from upload");
             console.log(data);
@@ -237,7 +238,7 @@ tenant.controller("tenant4_controller",['$scope','$http', 'fileUpload', function
         console.log('file is ' );
         console.dir(file);
 
-        var uploadUrl = "http://ec2-52-41-162-190.us-west-2.compute.amazonaws.com:5000/genUML";
+        var uploadUrl = "http://TenantLoadBalancer-646608857.us-west-2.elb.amazonaws.com/tenant4";
         fileUpload.uploadFileToUrl(file, uploadUrl, function(data){
             console.log("callback from upload");
             console.log(data);
